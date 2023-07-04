@@ -17,6 +17,11 @@
         line-height: 20px;
         padding-left: 10px;
     }
+    &_fz20 {
+        font-size: 20px;
+        line-height: 30px;
+        color: #000;
+    }
     &_fz36 {
         font-size: 36px;
         color: #000;
@@ -24,5 +29,18 @@
  
     &_fz48 {
         font-size: 48px;
+    }
+    &__section-title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &::before {
+            top: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__section-subtitle {
+        text-align: center;
     }
 }

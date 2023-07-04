@@ -1,3 +1,77 @@
 .experience {
-    padding-top: 120px;
+    padding-top: 110px;
+    &__block {
+        padding: 60px 65px;
+        display: grid;
+        column-gap: 135px;
+        grid-template-columns: repeat(2, 425px);
+    }
+    &__column {
+        &-title {
+           position: relative; 
+           padding-left: 35px;
+           @include before_circle;
+           &::before {
+            width: 15px;
+            height: 15px;
+            top: -5%;
+            left: -7px;
+            transform: translateY(50%);
+           }
+        }
+    ul {
+        list-style-type: none;
+        li {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: calc(100% + 17px);
+                left: 0;
+                background-color: #000000;
+                top: -17px;
+            }
+        }
+    }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 42px;
+            top: 69px;
+            position: absolute;
+            background-color: #111;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 100px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+        &-descr {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: normal;
+        }
+        &-icon {
+            position: absolute;
+            top: 56px;;
+            left: 42px;
+            @include before_circle;
+            img {
+                position: absolute;
+                left: 15px;
+                top: 12px;
+            }
+        }
+        &-location {
+            font-size: 12px;
+            line-height: normal;
+        }
+    }
 }

@@ -10,3 +10,12 @@ humburger.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     menu.remove('active');
 });
+
+//counter 
+
+const counters = document.querySelectorAll('.skills__ratings-counter'),
+    lines =document.querySelectorAll('.skills__ratings-line span');
+
+counters.forEach((counter, i) => {
+    lines[i].style.width = counter.textContent;
+});
